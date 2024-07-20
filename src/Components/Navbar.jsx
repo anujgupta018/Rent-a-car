@@ -48,12 +48,12 @@ const Navbar = ({ theme, setTheme }) => {
             {theme === "dark" ? (
               <BiSolidSun
                 onClick={() => setTheme("light")}
-                className="text-2xl"
+                className="text-2xl cursor-pointer"
               />
             ) : (
               <BiSolidMoon
                 onClick={() => setTheme("dark")}
-                className="text-2xl"
+                className="text-2xl cursor-pointer"
               />
             )}
           </div>
