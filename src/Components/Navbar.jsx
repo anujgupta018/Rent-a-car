@@ -1,30 +1,30 @@
 import React from "react";
-
-const Navbar = () => {
-  const NavLinks = [
-    {
-      id: "1",
-      name: "HOME",
-      link: "/#",
-    },
-    {
-      id: "2",
-      name: "CARS",
-      link: "/#cars",
-    },
-    {
-      id: "3",
-      name: "ABOUT",
-      link: "/#about",
-    },
-    {
-      id: "4",
-      name: "BOOKING",
-      link: "/#booking",
-    },
-  ];
+import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
+const NavLinks = [
+  {
+    id: "1",
+    name: "HOME",
+    link: "/#",
+  },
+  {
+    id: "2",
+    name: "CARS",
+    link: "/#cars",
+  },
+  {
+    id: "3",
+    name: "ABOUT",
+    link: "/#about",
+  },
+  {
+    id: "4",
+    name: "BOOKING",
+    link: "/#booking",
+  },
+];
+const Navbar = ({ theme, setTheme }) => {
   return (
-    <nav className="shadow-md">
+    <nav className="shadow-md bg-white dark:bg-dark dark:text-white duration-300">
       <div className="container">
         <div className="flex justify-between items-center">
           <div>
@@ -43,6 +43,19 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+          </div>
+          <div>
+            {theme === "dark" ? (
+              <BiSolidSun
+                onClick={() => setTheme("light")}
+                className="text-2xl"
+              />
+            ) : (
+              <BiSolidMoon
+                onClick={() => setTheme("dark")}
+                className="text-2xl"
+              />
+            )}
           </div>
         </div>
       </div>
