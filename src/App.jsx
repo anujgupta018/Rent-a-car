@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Hero from "./Components/Hero";
+import About from "./Components/About/About";
 
 function App() {
   const [theme, setTheme] = useState(
@@ -31,6 +32,7 @@ function App() {
     <div>
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero theme={theme} />
+      <About />
     </div>
   );
 }
