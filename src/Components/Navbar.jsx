@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 const NavLinks = [
   {
