@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Hero from "./Components/Hero";
 import About from "./Components/About/About";
+import Services from "./Components/Services/Services";
 
 function App() {
   const [theme, setTheme] = useState(
@@ -33,6 +34,7 @@ function App() {
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero theme={theme} />
       <About />
+      <Services />
     </div>
   );
 }
