@@ -33,7 +33,7 @@ function App() {
     AOS.refresh();
   }, []);
   return (
-    <div>
+    <div className="bg:white dark:bg-black dark:text-white">
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero theme={theme} />
       <About />
