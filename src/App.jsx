@@ -6,6 +6,7 @@ import Hero from "./Components/Hero";
 import About from "./Components/About/About";
 import Services from "./Components/Services/Services";
 import CarList from "./Components/CarList/CarList";
+import Testimonial from "./Components/Testimonial/Testimonial";
 
 function App() {
   const [theme, setTheme] = useState(
@@ -37,6 +38,7 @@ function App() {
       <About />
       <Services />
       <CarList />
+      <Testimonial />
     </div>
   );
 }
