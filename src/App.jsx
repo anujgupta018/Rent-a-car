@@ -9,6 +9,7 @@ import CarList from "./Components/CarList/CarList";
 import Testimonial from "./Components/Testimonial/Testimonial";
 import AppStore from "./Components/AppStore/AppStore";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [theme, setTheme] = useState(
@@ -43,6 +44,7 @@ function App() {
       <Testimonial />
       <AppStore />
       <Contact />
+      <Footer />
     </div>
   );
 }
