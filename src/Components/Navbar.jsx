@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
+import Responsive from "./Responsive";
+import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 const NavLinks = [
   {
     id: "1",
@@ -23,6 +25,10 @@ const NavLinks = [
   },
 ];
 const Navbar = ({ theme, setTheme }) => {
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
   return (
     <nav className="shadow-md bg-white dark:bg-dark dark:text-white duration-300 relative z-40">
       <div className="container md:py-0 py-3">
@@ -42,23 +48,39 @@ const Navbar = ({ theme, setTheme }) => {
                   </a>
                 </li>
               ))}
+              <div>
+                {theme === "dark" ? (
+                  <BiSolidSun
+                    onClick={() => setTheme("light")}
+                    className="text-2xl cursor-pointer"
+                  />
+                ) : (
+                  <BiSolidMoon
+                    onClick={() => setTheme("dark")}
+                    className="text-2xl cursor-pointer"
+                  />
+                )}
+              </div>
             </ul>
           </div>
-          <div>
-            {theme === "dark" ? (
-              <BiSolidSun
-                onClick={() => setTheme("light")}
-                className="text-2xl cursor-pointer"
+          <div className="flex items-center gap-4 md:hidden">
+            {showMenu ? (
+              <HiMenuAlt1
+                onClick={toggleMenu}
+                size={30}
+                className="cursor-pointer transition-all"
               />
             ) : (
-              <BiSolidMoon
-                onClick={() => setTheme("dark")}
-                className="text-2xl cursor-pointer"
+              <HiMenuAlt3
+                onClick={toggleMenu}
+                size={30}
+                className="cursor-pointer transition-all"
               />
             )}
           </div>
         </div>
       </div>
+      <Responsive showMenu={showMenu} />
     </nav>
   );
 };
