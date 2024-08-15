@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 ## Live Demo
 
-You can check the 'Rent-a-car' demo version [here](rent-a-car-orcin.vercel.app)
+You can check the 'Rent-a-car' demo version [here](https://rent-a-car-orcin.vercel.app/)
